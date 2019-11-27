@@ -1,12 +1,7 @@
-@Library('my-jenk-lib') _
+@Library('laas-jenkins-lib') _
 
-def pipeline = new ir.amv.os.tools.jenkins.lib.AmirBuilder()
+def pipeline = new ir.amv.enterprise.laas.tools.jenkins.lib.AmirBuilder()
 pipeline.execute([
-    "dockerEnv":"nexus-settings"
+    "IS_MAVEN_DEPLOY":true,
+    "MAVEN_DEPLOY_CREDENTIALS" : "jenkins-nexus-password"
 ])
-
-post {
-    always {
-        deleteDir()
-    }
-}
