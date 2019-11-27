@@ -25,12 +25,12 @@ public class MyClassTest {
     public static void openPort(final int i) {
         try {
             System.out.println("Test" + i + ",Running thread: " + Thread.currentThread().getId());
-            ServerSocket serverSocket = new ServerSocket(8080);
+            ServerSocket serverSocket = new ServerSocket(9889);
             Timer timer = new Timer();
             timer.schedule(new TimerTask() {
                 @Override
                 public void run() {
-                    try (Socket s = new Socket("localhost", 8080)){
+                    try (Socket s = new Socket("localhost", 9889)){
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
