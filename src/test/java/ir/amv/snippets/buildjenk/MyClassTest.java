@@ -24,21 +24,21 @@ public class MyClassTest {
 
     public static void openPort(final int i) {
         try {
-            System.out.println("Test" + i + ",Running thread: " + Thread.currentThread().getId());
-            ServerSocket serverSocket = new ServerSocket(9889);
-            Timer timer = new Timer();
-            timer.schedule(new TimerTask() {
-                @Override
-                public void run() {
-                    try (Socket s = new Socket("localhost", 9889)){
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }, 1000);
-            Socket accept = serverSocket.accept();
-            accept.close();
-            serverSocket.close();
+//            System.out.println("Test" + i + ",Running thread: " + Thread.currentThread().getId());
+//            ServerSocket serverSocket = new ServerSocket(9889);
+//            Timer timer = new Timer();
+//            timer.schedule(new TimerTask() {
+//                @Override
+//                public void run() {
+//                    try (Socket s = new Socket("localhost", 9889)){
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }, 1000);
+//            Socket accept = serverSocket.accept();
+//            accept.close();
+//            serverSocket.close();
             System.out.println("Test" + i + ", Socket closed");
         } catch (Exception e) {
             Assert.fail(e.getMessage());
