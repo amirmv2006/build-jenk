@@ -24,6 +24,7 @@ public class MyClassTest {
 
     public static void openPort(final int i) {
         try {
+
 //            System.out.println("Test" + i + ",Running thread: " + Thread.currentThread().getId());
 //            ServerSocket serverSocket = new ServerSocket(9889);
 //            Timer timer = new Timer();
