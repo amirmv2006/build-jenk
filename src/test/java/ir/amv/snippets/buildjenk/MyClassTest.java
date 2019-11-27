@@ -35,8 +35,9 @@ public class MyClassTest {
                         e.printStackTrace();
                     }
                 }
-            }, 10000);
+            }, 1000);
             Socket accept = serverSocket.accept();
+            accept.close();
             serverSocket.close();
             System.out.println("Test" + i + ", Socket closed");
         } catch (Exception e) {
