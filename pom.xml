@@ -10,7 +10,7 @@
     </parent>
     <groupId>ir.amv.snippets</groupId>
     <artifactId>build-jenk</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>build-jenk</name>
     <description>Demo project for Spring Boot</description>
 
@@ -84,12 +84,12 @@
         <repository>
             <id>releases</id>
             <name>releases</name>
-            <url>http://${env.MAVEN_REPO_BASE_URL}/${env.MAVEN_DEPLOY_RELEASE_REPO}/</url>
+            <url>http://localhost:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
             <name>snapshots</name>
-            <url>http://${env.MAVEN_REPO_BASE_URL}/${env.MAVEN_DEPLOY_SNAPSHOT_REPO}/</url>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
