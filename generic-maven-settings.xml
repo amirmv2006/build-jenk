@@ -1,4 +1,7 @@
 <settings>
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
     <servers>
         <server>
             <username>${env.MAVEN_USERNAME}</username>
@@ -49,6 +52,17 @@
                     </snapshots>
                 </pluginRepository>
             </pluginRepositories>
+        </profile>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url>${env.SONAR_HOST_URL}</sonar.host.url>
+                <sonar.token>${env.SONAR_TOKEN}</sonar.token>
+            </properties>
         </profile>
     </profiles>
     <activeProfiles>
